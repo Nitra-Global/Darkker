@@ -1,0 +1,752 @@
+@font-face {
+    font-family: InterVariable;
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url("InterVariable.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: InterVariable;
+    font-style: italic;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url("InterVariable-Italic.woff2") format("woff2");
+  }
+  
+  /* static fonts */
+  @font-face { font-family: "Inter"; font-style: normal; font-weight: 100; font-display: swap; src: url("Inter-Thin.woff2") format("woff2"); }
+  @font-face { font-family: "Inter"; font-style: italic; font-weight: 100; font-display: swap; src: url("Inter-ThinItalic.woff2") format("woff2"); }
+  @font-face { font-family: "Inter"; font-style: normal; font-weight: 200; font-display: swap; src: url("Inter-ExtraLight.woff2") format("woff2"); }
+  @font-face { font-family: "Inter"; font-style: italic; font-weight: 200; font-display: swap; src: url("Inter-ExtraLightItalic.woff2") format("woff2"); }
+  @font-face { font-family: "Inter"; font-style: normal; font-weight: 300; font-display: swap; src: url("Inter-Light.woff2") format("woff2"); }
+  @font-face { font-family: "Inter"; font-style: italic; font-weight: 300; font-display: swap; src: url("Inter-LightItalic.woff2") format("woff2"); }
+  @font-face { font-family: "Inter"; font-style: normal; font-weight: 400; font-display: swap; src: url("Inter-Regular.woff2") format("woff2"); }
+  @font-face { font-family: "Inter"; font-style: italic; font-weight: 400; font-display: swap; src: url("Inter-Italic.woff2") format("woff2"); }
+  @font-face { font-family: "Inter"; font-style: normal; font-weight: 500; font-display: swap; src: url("Inter-Medium.woff2") format("woff2"); }
+  @font-face { font-family: "Inter"; font-style: italic; font-weight: 500; font-display: swap; src: url("Inter-MediumItalic.woff2") format("woff2"); }
+  @font-face { font-family: "Inter"; font-style: normal; font-weight: 600; font-display: swap; src: url("Inter-SemiBold.woff2") format("woff2"); }
+  @font-face { font-family: "Inter"; font-style: italic; font-weight: 600; font-display: swap; src: url("Inter-SemiBoldItalic.woff2") format("woff2"); }
+  @font-face { font-family: "Inter"; font-style: normal; font-weight: 700; font-display: swap; src: url("Inter-Bold.woff2") format("woff2"); }
+  @font-face { font-family: "Inter"; font-style: italic; font-weight: 700; font-display: swap; src: url("Inter-BoldItalic.woff2") format("woff2"); }
+  @font-face { font-family: "Inter"; font-style: normal; font-weight: 800; font-display: swap; src: url("Inter-ExtraBold.woff2") format("woff2"); }
+  @font-face { font-family: "Inter"; font-style: italic; font-weight: 800; font-display: swap; src: url("Inter-ExtraBoldItalic.woff2") format("woff2"); }
+  @font-face { font-family: "Inter"; font-style: normal; font-weight: 900; font-display: swap; src: url("Inter-Black.woff2") format("woff2"); }
+  @font-face { font-family: "Inter"; font-style: italic; font-weight: 900; font-display: swap; src: url("Inter-BlackItalic.woff2") format("woff2"); }
+  @font-face { font-family: "InterDisplay"; font-style: normal; font-weight: 100; font-display: swap; src: url("InterDisplay-Thin.woff2") format("woff2"); }
+  @font-face { font-family: "InterDisplay"; font-style: italic; font-weight: 100; font-display: swap; src: url("InterDisplay-ThinItalic.woff2") format("woff2"); }
+  @font-face { font-family: "InterDisplay"; font-style: normal; font-weight: 200; font-display: swap; src: url("InterDisplay-ExtraLight.woff2") format("woff2"); }
+  @font-face { font-family: "InterDisplay"; font-style: italic; font-weight: 200; font-display: swap; src: url("InterDisplay-ExtraLightItalic.woff2") format("woff2"); }
+  @font-face { font-family: "InterDisplay"; font-style: normal; font-weight: 300; font-display: swap; src: url("InterDisplay-Light.woff2") format("woff2"); }
+  @font-face { font-family: "InterDisplay"; font-style: italic; font-weight: 300; font-display: swap; src: url("InterDisplay-LightItalic.woff2") format("woff2"); }
+  @font-face { font-family: "InterDisplay"; font-style: normal; font-weight: 400; font-display: swap; src: url("InterDisplay-Regular.woff2") format("woff2"); }
+  @font-face { font-family: "InterDisplay"; font-style: italic; font-weight: 400; font-display: swap; src: url("InterDisplay-Italic.woff2") format("woff2"); }
+  @font-face { font-family: "InterDisplay"; font-style: normal; font-weight: 500; font-display: swap; src: url("InterDisplay-Medium.woff2") format("woff2"); }
+  @font-face { font-family: "InterDisplay"; font-style: italic; font-weight: 500; font-display: swap; src: url("InterDisplay-MediumItalic.woff2") format("woff2"); }
+  @font-face { font-family: "InterDisplay"; font-style: normal; font-weight: 600; font-display: swap; src: url("InterDisplay-SemiBold.woff2") format("woff2"); }
+  @font-face { font-family: "InterDisplay"; font-style: italic; font-weight: 600; font-display: swap; src: url("InterDisplay-SemiBoldItalic.woff2") format("woff2"); }
+  @font-face { font-family: "InterDisplay"; font-style: normal; font-weight: 700; font-display: swap; src: url("InterDisplay-Bold.woff2") format("woff2"); }
+  @font-face { font-family: "InterDisplay"; font-style: italic; font-weight: 700; font-display: swap; src: url("InterDisplay-BoldItalic.woff2") format("woff2"); }
+  @font-face { font-family: "InterDisplay"; font-style: normal; font-weight: 800; font-display: swap; src: url("InterDisplay-ExtraBold.woff2") format("woff2"); }
+  @font-face { font-family: "InterDisplay"; font-style: italic; font-weight: 800; font-display: swap; src: url("InterDisplay-ExtraBoldItalic.woff2") format("woff2"); }
+  @font-face { font-family: "InterDisplay"; font-style: normal; font-weight: 900; font-display: swap; src: url("InterDisplay-Black.woff2") format("woff2"); }
+  @font-face { font-family: "InterDisplay"; font-style: italic; font-weight: 900; font-display: swap; src: url("InterDisplay-BlackItalic.woff2") format("woff2"); }
+
+
+/* newtab.css */
+
+/* Disable text selection globally */
+* {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard */
+  }
+  
+  /* Reset and Base Styles */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+    color: #ffffff;
+    overflow: hidden;
+    position: relative;
+    transition: background-color 0.5s ease; /* Smooth transition for background color changes */
+  }
+  
+  /* Background Styling */
+  #background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+    transition: background 0.5s ease-in-out; /* Smooth transition for background image changes */
+  }
+  
+  /* Overlay for Dark Mode */
+  body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(18, 18, 18, 0.415);
+    z-index: -1;
+    opacity: 0; /* Start with hidden overlay */
+    animation: fadeIn 0.5s forwards; /* Fade in animation */
+  }
+  
+  /* Animation for Overlay */
+  @keyframes fadeIn {
+    to {
+      opacity: 1; /* Fully visible overlay */
+    }
+  }
+  
+  /* Time and Date Container */
+  .time-date-container {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 20px 40px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.021);
+    animation: slideIn 0.5s ease-in-out; /* Smooth slide-in animation */
+  }
+  
+  /* Slide-In Animation for Time and Date */
+  @keyframes slideIn {
+    from {
+      transform: translate(-50%, -60%); /* Start slightly higher */
+      opacity: 0; /* Start fully transparent */
+    }
+    to {
+      transform: translate(-50%, -50%); /* End at the center */
+      opacity: 1; /* Fully visible */
+    }
+  }
+  
+  .time-date-container #time {
+    font-size: 64px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    transition: color 0.3s ease; /* Smooth color change transition */
+  }
+  
+  .time-date-container #date {
+    font-size: 24px;
+    font-weight: 300;
+    transition: color 0.3s ease; /* Smooth color change transition */
+  }
+  
+  /* Example for hover effects */
+  .time-date-container:hover {
+    background: rgba(255, 255, 255, 0.1); /* Slightly brighter background on hover */
+  }
+  
+  
+  /* Search Container */
+  .search-container {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 10px 20px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  #search-bar {
+    font-family: 'Inter', sans-serif;
+    width: 300px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    transition: background 0.3s ease;
+  }
+  
+  #search-bar:hover,
+  #search-bar:focus {
+    background: rgba(255, 255, 255, 0.15);
+  }
+  
+  #search-bar::placeholder {
+    color: #cccccc;
+    font-weight: 300;
+  }
+  
+  #search-engine {
+    font-family: 'Inter', sans-serif;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    outline: none;
+    transition: background 0.3s ease;
+  }
+  
+  #search-engine:hover,
+  #search-engine:focus {
+    background: rgba(255, 255, 255, 0.15);
+  }
+  
+  .search-container label {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    color: #dddddd;
+  }
+  
+  /* Checkbox Styling */
+  #open-in-new-tab {
+    transform: scale(1.2);
+    accent-color: #ffffff;
+  }
+  
+  /* Quick Actions */
+.quick-actions {
+    font-family: 'Inter', sans-serif;
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    padding: 10px 0;
+  }
+  
+  .quick-action {
+    font-family: 'Inter', sans-serif;
+    width: 100px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    overflow: hidden; /* Ensure overflow is hidden */
+  }
+  
+  .quick-action:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+  }
+  
+  .quick-action span {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    word-break: break-word;
+    overflow: hidden; /* Prevent text overflow */
+    text-overflow: ellipsis; /* Show ellipsis for truncated text */
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+    max-width: 80%; /* Limit the width for text truncation */
+  }
+  
+  
+  /* Sidebar Toggle Button */
+  #open-sidebar {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    color: #ffffff;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+  
+  #open-sidebar:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(90deg);
+  }
+  
+  /* Sidebar Styling */
+  .sidebar {
+    font-family: 'Inter', sans-serif;
+    position: fixed;
+    top: 0;
+    right: -320px; /* Increased width for better content spacing */
+    width: 320px;
+    height: 100%;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.05);
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Sidebar Active State */
+  .sidebar.active {
+    right: 0;
+  }
+  
+  /* Smooth Scroll for Sidebar Content */
+  .sidebar-content {
+    padding: 20px;
+    height: 100%;
+    overflow-y: auto;
+  }
+  
+  /* Scrollbar Styling */
+  .sidebar-content::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .sidebar-content::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+  }
+  
+  .sidebar-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
+  /* Sidebar Sections */
+  .sidebar-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  
+  /* Section Headers */
+  .sidebar-section h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+  }
+  
+  /* Labels */
+  .sidebar-section label {
+    font-size: 14px;
+    color: #dddddd;
+    margin-bottom: 4px;
+  }
+  
+  /* Inputs and Selects */
+  .sidebar-section input,
+  .sidebar-section select {
+    font-family: 'Inter', sans-serif;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    outline: none;
+    transition: background 0.3s ease;
+  }
+  
+  .sidebar-section input:hover,
+  .sidebar-section input:focus,
+  .sidebar-section select:hover,
+  .sidebar-section select:focus {
+    background: rgba(255, 255, 255, 0.15);
+  }
+  
+  /* File Input Styling */
+  .sidebar-section input[type="file"] {
+    font-family: 'Inter', sans-serif;
+    padding: 0;
+    cursor: pointer;
+    font-size: 14px;
+    color: #ffffff;
+  }
+  
+  .sidebar-section input[type="file"]::file-selector-button {
+    font-family: 'Inter', sans-serif;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-size: 14px;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .sidebar-section input[type="file"]::file-selector-button:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+  
+  /* Quick Actions List in Sidebar */
+  .quick-actions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  /* Quick Action Items in Sidebar */
+  .quick-action-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px 14px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+  }
+  
+  .quick-action-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Input Fields within Quick Actions */
+  .quick-action-item input.action-name,
+  .quick-action-item input.action-url {
+    flex: 1;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-size: 14px;
+    outline: none;
+    transition: background 0.3s ease;
+  }
+  
+  .quick-action-item input.action-name:hover,
+  .quick-action-item input.action-url:hover,
+  .quick-action-item input.action-name:focus,
+  .quick-action-item input.action-url:focus {
+    background: rgba(255, 255, 255, 0.15);
+  }
+  
+  /* Remove Action Button */
+  .remove-action {
+    background: none;
+    border: none;
+    color: #ff5555;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .remove-action:hover {
+    color: #ff8888;
+  }
+  
+  /* Add Action Button */
+  #add-action {
+    font-family: 'Inter', sans-serif;
+    padding: 12px 0;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  #add-action:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+  
+  /* Quick Actions List in Main Page */
+  .quick-actions {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    padding: 10px 0;
+  }
+  
+  /* Modern and Minimalistic Design Enhancements */
+  body,
+  .sidebar,
+  .search-container,
+  .quick-action,
+  #open-sidebar,
+  .quick-action-item {
+    /* Glass Effect */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .quick-action-item input.action-name,
+  .quick-action-item input.action-url,
+  #search-bar,
+  #search-engine,
+  .sidebar-section input,
+  .sidebar-section select {
+    font-family: 'Inter', sans-serif;
+    /* Consistent Input Styling */
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+  }
+  
+  .quick-action-item input.action-name::placeholder,
+  .quick-action-item input.action-url::placeholder,
+  #search-bar::placeholder {
+    color: #cccccc;
+    user-select: none;
+  }
+  
+  /* Remove Shadows and Borders */
+  * {
+    box-shadow: none;
+  }
+  
+  input,
+  select,
+  button {
+    border: none;
+    outline: none;
+  }
+  
+  /* Disable text selection on specific elements if needed */
+  .time-date-container,
+  .quick-action,
+  #open-sidebar {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+
+
+
+
+
+
+
+/* Toolbar unten links */
+.bottom-toolbar {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  display: flex;
+  gap: 10px;
+  z-index: 1001; /* Über den Hintergrund legen */
+}
+
+.bottom-toolbar button {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, transform 0.2s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.bottom-toolbar button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+/* Modals */
+.modal {
+  display: none; /* Standardmäßig versteckt */
+  position: fixed;
+  z-index: 1002; /* Über der Toolbar */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Scrollen bei Bedarf */
+  background-color: rgba(0, 0, 0, 0.5); /* Halbtransparenter Hintergrund */
+}
+
+.modal-content {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  margin: 10% auto; /* Zentriert vertikal */
+  padding: 20px;
+  border-radius: 15px;
+  width: 80%;
+  max-width: 500px;
+  color: #ffffff;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeInModal 0.3s ease-in-out;
+}
+
+@keyframes fadeInModal {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Close Button für Modals */
+.modal .close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.modal .close:hover {
+  color: #ff5555;
+}
+
+/* Notizen Textarea */
+#notes-text {
+  width: 100%;
+  height: 200px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  resize: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: background 0.3s ease;
+}
+
+#notes-text:hover,
+#notes-text:focus {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Lesezeichen Liste */
+#bookmarks-list {
+  list-style: none;
+  padding: 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+#bookmarks-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#bookmarks-list li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  flex: 1;
+  margin-right: 10px;
+  transition: color 0.3s ease;
+}
+
+#bookmarks-list li a:hover {
+  color: #ffdd57;
+}
+
+#bookmarks-list li button.remove-bookmark {
+  background: none;
+  border: none;
+  color: #ff5555;
+  cursor: pointer;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+#bookmarks-list li button.remove-bookmark:hover {
+  color: #ff8888;
+}
+
+/* Add Bookmark Button */
+#add-bookmark {
+  font-family: 'Inter', sans-serif;
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+#add-bookmark:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Anpassungen für Modals */
+@media (max-width: 600px) {
+  .modal-content {
+    width: 90%;
+    margin: 20% auto;
+  }
+
+  #search-bar {
+    width: 200px;
+  }
+
+  .quick-action {
+    width: 80px;
+    height: 50px;
+  }
+}

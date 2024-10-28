@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Darkker - New Tab</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="newtab.css">
+</head>
+<body>
+  <div id="background"></div>
+
+  <div class="time-date-container" id="time-date-container">
+    <div id="time">00:00</div>
+    <div id="date">Montag, 1. Januar</div>
+  </div>
+
+  <div class="search-container" id="search-container">
+    <input type="text" id="search-bar" placeholder="Suche...">
+    <select id="search-engine">
+      <option value="google">Google</option>
+      <option value="bing">Bing</option>
+      <option value="duckduckgo">DuckDuckGo</option>
+      <option value="yahoo">Yahoo</option>
+      <option value="ecosia">Ecosia</option>
+      <option value="startpage">Startpage</option>
+    </select>
+    <label>
+      <input type="checkbox" id="open-in-new-tab" checked>
+      In neuem Tab öffnen
+    </label>
+  </div>
+
+  <div class="quick-actions" id="quick-actions">
+    <!-- Schnellaktionen werden hier dynamisch hinzugefügt -->
+  </div>
+
+  <button id="open-sidebar" class="material-icons">edit</button>
+
+  <!-- Sidebar -->
+  <div id="sidebar" class="sidebar">
+    <div class="sidebar-content" id="sidebar-content"></div>
+  </div>
+
+  <!-- Toolbar unten links -->
+  <div class="bottom-toolbar">
+    <button id="open-notes" class="material-icons" title="Notizen">note_add</button>
+    <button id="open-bookmarks" class="material-icons" title="Lesezeichen">bookmark</button>
+  </div>
+
+  <!-- Notizen Modal -->
+  <div id="notes-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="close-notes">&times;</span>
+      <h2>Notizen</h2>
+      <textarea id="notes-text" placeholder="Deine Notizen..."></textarea>
+    </div>
+  </div>
+
+  <!-- Lesezeichen Modal -->
+  <div id="bookmarks-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="close-bookmarks">&times;</span>
+      <h2>Lesezeichen</h2>
+      <ul id="bookmarks-list">
+        <!-- Lesezeichen werden hier dynamisch hinzugefügt -->
+      </ul>
+      <button id="add-bookmark">Lesezeichen hinzufügen</button>
+    </div>
+  </div>
+
+  <script src="newtab.js"></script>
+</body>
+</html>
