@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Updates | Darkker</title>
+    <link rel="stylesheet" href="updates.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="extension-title">Darkker</h1>
+        </header>
+        
+        <main>
+            <div class="status-card">
+                <div class="status-header">
+                    <div class="status-indicator">
+                        <span id="status-icon" class="loading"></span>
+                        <span id="status-message">Checking for updates...</span>
+                    </div>
+                </div>
+                
+                <div class="version-info">
+                    <div class="version-item">
+                        <span class="version-label">Installed Version:</span>
+                        <span id="installed-version" class="version-value">0.0.0</span>
+                    </div>
+                    <div class="version-item">
+                        <span class="version-label">Latest Version:</span>
+                        <span id="latest-version" class="version-value">0.0.0</span>
+                    </div>
+                </div>
+                <div class="actions">
+                    <button id="release-notes-btn" class="btn primary">Release Notes</button>
+                    <button id="clear-cache-btn" class="btn secondary">Clear Cache</button>
+                    <a href="https://github.com/Nitra-Global/NG-Extension-Manager/releases" target="_blank">
+                        <button id="download" class="btn secondary">Download</button>
+                      </a>
+                      <div>
+                </div>
+             </div>
+        </main>
+        
+        <!-- Release Notes Modal -->
+        <div id="release-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Release Notes</h2>
+                    <button id="close-modal" class="close-btn">&times;</button>
+                </div>
+                
+                <div class="modal-filters">
+                    <input type="text" id="search-input" placeholder="Search releases...">
+                    <select id="sort-options">
+                        <option value="date">Sort by Date (newest first)</option>
+                        <option value="version">Sort by Version</option>
+                        <option value="name">Sort by Name</option>
+                        <option value="type">Sort by Type</option>
+                    </select>
+                </div>
+                
+                <div id="releases-container" class="releases-container">
+                    <!-- Release items will be inserted here dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="updates.js"></script>
+</body>
+</html>
