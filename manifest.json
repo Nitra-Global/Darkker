@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Darkker",
-    "version": "1.0",
+    "version": "1.0.0",
     "description": "A minimalistic dark-themed new tab extension with customizable backgrounds and quick actions.",
     "icons": {
       "128": "icon128.png"
@@ -9,6 +9,12 @@
     "chrome_url_overrides": {
       "newtab": "newtab.html"
     },
+
+    "options_ui": {
+    "page": "updates.html",
+    "open_in_tab": true
+  },
+
     "permissions": [
       "storage",
       "bookmarks"
@@ -19,4 +25,3 @@
       }
     }
   }
-  
