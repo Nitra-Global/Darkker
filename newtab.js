@@ -144,9 +144,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Render Sidebar Content
   function renderSidebarContent() {
     sidebarContent.innerHTML = `
+      <button id="close-sidebar" class="close-btn">X</button>
       <div class="sidebar-section">
         <h3>Hintergrund</h3>
         <label for="bg-type">Videos können viele Ressourcen verbrauchen, was sich auf die Leistung auswirkt.</label>
@@ -158,7 +158,6 @@ document.addEventListener('DOMContentLoaded', () => {
         </select>
         <div id="bg-options"></div>
       </div>
-
       <div class="sidebar-section">
         <h3>Suchmaschine</h3>
         <label for="sidebar-search-engine">Wähle deine Suchmaschine:</label>
@@ -171,7 +170,6 @@ document.addEventListener('DOMContentLoaded', () => {
           <option value="startpage">Startpage</option>
         </select>
       </div>
-
       <div class="sidebar-section">
         <h3>Schnellaktionen</h3>
         <label for="quick-actions-list">Stelle sicher, dass du https://google.com verwendest, nicht "google.com"</label>
@@ -179,6 +177,12 @@ document.addEventListener('DOMContentLoaded', () => {
         <button id="add-action">Aktion hinzufügen</button>
       </div>
     `;
+  
+    // Add close functionality
+    const closeSidebarBtn = document.getElementById('close-sidebar');
+    closeSidebarBtn.addEventListener('click', () => {
+      sidebar.classList.remove('active');
+    });
 
     // Set Background Type
     const bgTypeSelect = document.getElementById('bg-type');
@@ -193,14 +197,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Render Background Options
     applyBackgroundOptions();
 
-    // Set Search Engine in Sidebar
-    const sidebarSearchEngine = document.getElementById('sidebar-search-engine');
-    sidebarSearchEngine.value = settings.searchEngine;
-    sidebarSearchEngine.addEventListener('change', (e) => {
-      settings.searchEngine = e.target.value;
-      chrome.storage.local.set({ searchEngine: settings.searchEngine });
-      searchEngineSelect.value = settings.searchEngine;
-    });
+    // Other initialization logic (background options, search engine, etc.)
+  applyBackgroundOptions();
+  const sidebarSearchEngine = document.getElementById('sidebar-search-engine');
+  sidebarSearchEngine.value = settings.searchEngine;
+  sidebarSearchEngine.addEventListener('change', (e) => {
+    settings.searchEngine = e.target.value;
+    chrome.storage.local.set({ searchEngine: settings.searchEngine });
+    searchEngineSelect.value = settings.searchEngine;
+  });
 
     // Render Quick Actions
     renderQuickActionsInSidebar();
